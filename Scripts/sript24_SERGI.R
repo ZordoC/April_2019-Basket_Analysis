@@ -18,6 +18,7 @@ tr <- read.transactions("C:/Users/Sergi Ch/Downloads/UBIQUM/PROJECT 2 - R/RM2T4/
 
 #### 1.DATA ANALYSIS####
 
+<<<<<<< HEAD
 inspect (tr) # You can view the transactions. Is there a way to see a certain # of transactions?
 length (tr) # Number of transactions.
 M<-size (tr) # Number of items per transaction
@@ -42,3 +43,15 @@ inspect(Rules)
 
 
 
+=======
+#List all the transactions
+inspect(tr)
+#Save the matrix with transactions numbers 
+M<-size(tr)
+M
+
+#histogram of the numer of transactions
+hist(M, breaks=30)
+hist(M, freq=FALSE, main="Density plot")
+itemFrequencyPlot(tr, topN=5)
+>>>>>>> Sergi
