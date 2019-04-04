@@ -16,9 +16,9 @@ ElectronidexTransactions2017 <- read_csv("C:/Users/Sergi Ch/Downloads/UBIQUM/PRO
 #SET DATA AS A TRANSACTION
 tr <- read.transactions("C:/Users/Sergi Ch/Downloads/UBIQUM/PROJECT 2 - R/RM2T4/Datasets/ElectronidexTransactions2017.csv", format = "basket", sep=",",  rm.duplicates=FALSE)
 
+
 #### 1.DATA ANALYSIS####
 
-<<<<<<< HEAD
 inspect (tr) # You can view the transactions. Is there a way to see a certain # of transactions?
 length (tr) # Number of transactions.
 M<-size (tr) # Number of items per transaction
@@ -33,25 +33,33 @@ hist(M, breaks=30)
 #top 10 most purchased items
 itemFrequencyPlot(tr, topN=10)
 
-
 image1<-image(sample(tr[1:100]))
 image1
 
-####2.APPLYING RULES####
-Rules<- apriori (tr, parameter = list(supp = 0.05, conf = 0.3))
+####2.CREATING RULES####
+Rules<- apriori (tr, parameter = list(supp = 0.002, conf = 0.75))
+
 inspect(Rules)
+summary(Rules)
+plot(Rules)
+
+####3.RULES ANALYSIS####
+#sort by (conf, support, lift...)
+inspect(sort(Rules, by = "lift"))
+Rules.sorted<-sort(Rules, by = "lift", order = FALSE)
+
+#subset by item name
+ItemRules <- subset(Rules, items %in% "iMac")
+ItemRules
+
+#check for redundant rules
+is.redundant(Rules)
+
+#show the redundant rules
+which(is.redundant(Rules), arr.ind = TRUE, useNames = TRUE)
+inspect(Rules[c(63,73)])
 
 
-
-=======
-#List all the transactions
-inspect(tr)
-#Save the matrix with transactions numbers 
-M<-size(tr)
-M
-
-#histogram of the numer of transactions
-hist(M, breaks=30)
-hist(M, freq=FALSE, main="Density plot")
-itemFrequencyPlot(tr, topN=5)
->>>>>>> Sergi
+#Plotting the rules
+plot(Rules, method="graph", control=list(type="items"))
+plot(Rules, method="paracoord", control=list(reorder=TRUE))
