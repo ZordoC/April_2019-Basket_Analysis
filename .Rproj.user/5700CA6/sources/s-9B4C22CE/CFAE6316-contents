@@ -23,13 +23,7 @@ length(Data1) # Number of transactions.
 M <-size(Data) # Number of items per transaction
 LIST(Data) # Lists the transactions by conversion (LIST must be capitalized)
 itemLabels(Data)#
-
-itemFrequencyPlot(Data,type = "relative",topN=10)
-
-
-Data[!a=NUMBER_TO_REMOVE]
-
-
+M
 M1 <-M[M]
 M1
 max(M)
@@ -37,4 +31,33 @@ max(M)
 length(M1)
 
 hist(M,breaks=30)
+itemFrequencyPlot(Data,type = "relative",topN=5)
+
+
+RulesName<- apriori (Data, parameter=list(supp = 0.005, conf = 0.5))
+
+inspect(RulesName)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

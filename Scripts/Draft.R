@@ -2,6 +2,7 @@ library(arules)
 library(readr)
 library(arulesViz)
 library(rstudioapi)
+library(ggplot2)
 
 
 
@@ -10,5 +11,53 @@ current_path = getActiveDocumentContext()$path
 setwd(dirname(current_path))
 setwd("..")
 rm(current_path)
-EP <- read.csv( file ="./data/ElectronidexTransactions2017.csv" , header = TRUE , sep = ',')
+Data1 <-read.transactions(file ="./data/ElectronidexTransactions2017.csv" , format = "basket", 
+                  header = FALSE, sep = ",", 
+                   rm.duplicates = TRUE) 
+                  
+
+
+summary(data)
+inspect(Data) # You can view the transactions. Is there a way to see a certain # of transactions?
+length(Data1) # Number of transactions.
+M <-size(Data) # Number of items per transaction
+LIST(Data) # Lists the transactions by conversion (LIST must be capitalized)
+itemLabels(Data)#
+M
+M1 <-M[M]
+M1
+max(M)
+
+length(M1)
+
+hist(M,breaks=30)
+itemFrequencyPlot(Data,type = "relative",topN=5)
+
+
+RulesName<- apriori (Data, parameter=list(supp = 0.005, conf = 0.5))
+
+inspect(RulesName)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
