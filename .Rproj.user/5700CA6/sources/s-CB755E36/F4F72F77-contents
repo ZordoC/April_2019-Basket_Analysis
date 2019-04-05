@@ -1,0 +1,13 @@
+
+##### ReplaceFUnction #### 
+
+ReplaceFunction <- function(level,indices,category)
+{
+  
+  
+  level <- replace(level,indices,category)
+  
+  level
+  
+  
+}
