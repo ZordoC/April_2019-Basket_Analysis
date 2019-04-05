@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554452460376.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "568B0CA8",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1554452460376,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A29FFB89",
+        "caption" : "ElectronidexTransactions2017",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=ElectronidexTransactions2017&cache_key=A29FFB89",
+        "displayedObservations" : 9835,
+        "environment" : "",
+        "object" : "ElectronidexTransactions2017",
+        "preview" : 0,
+        "totalObservations" : 9835,
+        "variables" : 32
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

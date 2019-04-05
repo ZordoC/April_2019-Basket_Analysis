@@ -54,12 +54,12 @@ Well first thing is first, we just import the data into Rstudio.
 </br>
 ```{r }
 
-library(readr)
-library(arules)
-library(arulesViz)
-library(rstudioapi)
-library(ggplot2)
-
+if(require("pacman")=="FALSE"){
+  install.packages('pacman')
+  library('pacman')
+  pacman::p_load(here, stringr, readxl, plyr, caret, dplyr, doParallel,
+lubridate, crayon, corrplot, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
+}
 
 
 # 
@@ -95,7 +95,11 @@ With this information we can plot a simple histogram, and some very valuable inf
 </br>
 </br>
 ```{r}
-hist(M,breaks=30) ## breaks = 20 for the number of items
+hist(M,breaks=30)
+
+ggplot
+
+## breaks = 20 for the number of items
 ```
 </br>
 </br>
@@ -126,4 +130,6 @@ Data1 <-read.transactions(file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/da
 
 
 
+
+####Creating 
 

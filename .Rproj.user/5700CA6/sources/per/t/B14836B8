@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554397581705.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B14836B8",
+    "lastKnownWriteTime" : 375443856,
+    "last_content_update" : 1554397581705,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "898D4761",
+        "caption" : "DataToTransf",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=DataToTransf&cache_key=898D4761",
+        "displayedObservations" : "9835",
+        "environment" : "",
+        "object" : "DataToTransf",
+        "preview" : "0",
+        "totalObservations" : "9835",
+        "variables" : "33"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
