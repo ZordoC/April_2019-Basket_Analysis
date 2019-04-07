@@ -5,17 +5,28 @@ if(require("pacman")=="FALSE"){
                  lubridate, crayon, corrplot, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
 }
 
-ElectronidexTransactions2017 -> DataToTransf
 
-DataToTransf$rownumber <- (1:nrow(DataToTransf))
+DataTran_df <- read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",header = FALSE,sep = ",")
 
-A <-melt(DataToTransf,"rownumber")
+
+DataTran_df$rownumber <- (1:nrow(DataTran_df))
+
+apply(DataTran_df, , sum)
+
+
+A <-melt(DataTran_df,"rownumber")
 
 
 
  A <-  A %>%  filter(value != "") %>%
 arrange(rownumber) 
 
+ 
+ A$variable <- NULL
+ 
+ 
+ 
+ 
 
  ####STEP 1 CREATE TABLE####
  DataToTransf<-as.data.frame(as( "matrix"))

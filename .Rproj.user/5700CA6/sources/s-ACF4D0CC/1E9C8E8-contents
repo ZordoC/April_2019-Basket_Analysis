@@ -12,8 +12,43 @@ trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/Elec
                          format="basket",sep=",",rm.duplicates = TRUE) 
 
 
+
+
+
+ItemAssociationTable <-  read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/D2T4 by cateogory - Hoja 1(1).csv",header = TRUE,sep = ",")
+
+
 DataTran_df<-as.data.frame(as(trans, "matrix"))
 
+ItemAssociationTable[1] <- NULL 
+
+
+
+ItemAssociationTable$Laptops <- NULL
+
+
+select(DataTran_df,)
+
+
+
+colnames(ItemAssociationTable)[1] <- "Laptops"
+
+
+
+
+Laptops <- c("LG Touchscreen Laptop","Acer Aspire","HP Laptop","ASUS Chromebook",
+             "Apple Macbook Pro","Apple MacBook Air","Dell Laptop","Eluktronics Pro Gaming Laptop","Alienware AW17R4-7345SLV-PUS 17  Laptop","HP Notebook Touchscreen Laptop PC")
+
+
+
+apply(DataTran_df,1,)
+
+
+
+
+
+
+ItemAssociationTable$Laptops 
 
 #View(DataTran_df)
 
@@ -24,14 +59,23 @@ itemFrequency(trans[,1:5])
 
 #### CSV breakdown  #### 
 
-DataTran_df[DataTran_df==0] <- colnames(DataTran_df)[which(DataTran_df==1, arr.ind=1)[,'col']]
 
+
+
+DataTran_df[DataTran_df==TRUE] <- colnames(DataTran_df)[which(DataTran_df==TRUE, arr.ind=TRUE)[,'col']]
 
 DataTran_df$busimess <- 1
 
 
 DTrue <- DataTran_df +0
 
+
+mutate(DTrue,SmartHome =DTrue$`Apple TV` + DTrue$`Google Home` + DTrue$`Smart Light` +DTrue$`Bulb` + DTrue$`Fire TV` + DTrue$`Stick` + DTrue$`Roku Express`)
+
+
+
+
+DTrue$`Roku Express`
 
 MySum <- rowSums(DTrue)
 
@@ -176,6 +220,27 @@ trans@itemInfo$category <- replace(trans@itemInfo$category,indicesCombo,"Keyboar
 trans@itemInfo$category <- replace(trans@itemInfo$category,indicesComputerHeadPhones,"Computer Head Phones")
 
 
+#### Replace Function
+ReplaceFunction <- function(data,indices,category)
+  
+  {
+  
+  data <- replace(data,indicesComputerHeadPhones,category)
+  
+  
+  data
+}
+
+
+
+ReplaceAllValues <- function() 
+  {
+  
+  
+
+  
+  
+  }
 
 
 
