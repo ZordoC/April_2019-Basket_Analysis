@@ -94,6 +94,7 @@ DataByCategory <- DataReady[,c(1,3,4)]
 # TransObject<-as(AggPosData2,'transactions')
 # 
 
+
 laptops <- c()
 
 for(i in 1:9835){
@@ -279,4 +280,48 @@ inspect(Rule[1:10])
 # 
 # level1<- itemInfo(trans@itemInfo$labels)[["level1"]]
 # 
+
+
+
+
+
+Business1234<-as.data.frame(as(trans, "matrix"))
+
+
+# Business1234 <-Business1234[BusinessIndices,] 
+# 
+# 
+# 
+# B2b2 <- Business1234[Indices,]
+# 
+# 
+# 
+# B2b9 <- bind_rows(Business1234,B2b2)
+# 
+# B2b9 <- unique(B2b9)
+
+
+# B2cN <- Business1234[-BusinessIndices,]
+# 
+# B2cN1 <- Business1234[-Indices,]
+
+
+B2c <- Business1234[-B2b3$rownumber,]
+
+
+write.csv(B2c,file="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2cReal")
+
+# B2cReal <- bind_rows(B2cN,B2cN1)
+# 
+# B2cReal <- unique(B2c)
+
+write.csv(B2b9,file= "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2bReal")
+
+B2b9OBj1 <- as(B2b9,"transactions")
+
+
+
+
+
+
 #  

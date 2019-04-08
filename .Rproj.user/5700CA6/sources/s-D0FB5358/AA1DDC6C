@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554734181013.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AA1DDC6C",
+    "lastKnownWriteTime" : 1554716461,
+    "last_content_update" : 1554734181013,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "f671639710ad4dee8fc680ca6b8812ef",
+        "name" : "trans",
+        "title" : "trans"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}
