@@ -57,6 +57,7 @@ Combo <- grep(c("Logitech MK550 Wireless Wave Keyboard and Mouse Combo|Logitech 
 ComputerHeadPhones <- grep(c("Zombie Gaming Headset|Logitech ClearChat Headset|Panasonic On-Ear Stereo Headphones RP-HT21|PC Gaming Headset|Kensington Headphones|Logitech Stereo Headset|Koss Home Headphones|Microsoft Headset|Ailihen Stereo Headphones|XIBERIA Gaming Headset"),DataReady$value)
 ##
 DataReady$value -> Names
+
 Names <- replace(Names,Laptop,"Laptop")
 Names <- replace(Names,Desktop,"Desktop")
 Names <- replace(Names,Tablets,"Tablet")
@@ -83,32 +84,61 @@ DataReady <- cbind(DataReady,Names)
 DataByCategory <- DataReady[,c(1,4)]
 
 
-aggregate
-
-
-
-
-
 AggPosData2 <- split(DataByCategory$Names,DataByCategory$rownumber)
+
+head(AggPosData2)
 
 TransObject<-as(AggPosData2,'transactions')
 
 
 count <- c()
 
-for(i in 1:43328) 
-  {
+ifelse
+
+laptops <- c()
+
+for(i in 1:9835){
+
+laptops[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Laptop")
+
+laptops
+
+}
+
+
+desktops <- c()
+
+for(i in 1:9835){
   
-   
+  desktops[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Desktop")
   
+  desktops
   
-  count +1 
+}
+
+printers <- c()
+
+for(i in 1:9835){
   
+  printers[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Printer")
   
   
   
 }
 
+
+monitors <- c()
+
+for(i in 1:9835){
+  
+  monitors[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="monitors")
+  
+  monitors
+  
+}
+
+
+itemFrequencyPlot(DataByCategory)
 
 
 
@@ -128,6 +158,9 @@ Matrix <- cbind(Matrix,Sum)
  aggregate(TransObject,)
  
  
- 
- 
+str(trans)
+trans@itemInfo$labels
+
+level1<- itemInfo(trans@itemInfo$labels)[["level1"]]
+
  

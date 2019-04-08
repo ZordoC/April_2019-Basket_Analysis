@@ -140,7 +140,6 @@ indicesTablets <- grep(c("iPad|Tablet|Tab|kindle"),trans@itemInfo$labels)
 
 indicesMonitor <- grep(c("Monitor"),trans@itemInfo$labels)
 
-indicesMice <-
 
 indicesMiceAndKeyboard <-grep(c("Mouse|Keyboard"),trans@itemInfo$labels)
  
@@ -243,7 +242,7 @@ ReplaceAllValues <- function()
   }
 
 
-
+trans@itemInfo$category
 #### Test ####
 
 Dataframe <- as.data.frame(trans)

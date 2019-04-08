@@ -12,9 +12,9 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "96ED0B81",
+        "cacheKey" : "1F54848F",
         "caption" : "DataReady",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=DataReady&cache_key=96ED0B81",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=DataReady&cache_key=1F54848F",
         "displayedObservations" : "43328",
         "environment" : "",
         "object" : "DataReady",
