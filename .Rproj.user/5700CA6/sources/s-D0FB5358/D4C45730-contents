@@ -197,7 +197,11 @@ B2bT <- as(B2b,"transactions")
 
 B2cT <- as(B2c,"transactions")
 
-str(B2cT)
+
+write.csv(B2b3,file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2b.csv")
+
+write.csv(B2c,file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2c.csv")
+
 
 # duprows <- which(!is.na(match(rownames(bar),rownames(foo))))
 # rbind(foo,bar[-duprows,])
