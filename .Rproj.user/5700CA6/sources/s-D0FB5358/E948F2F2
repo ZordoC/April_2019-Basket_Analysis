@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554727971909.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E948F2F2",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1554727971909,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "8F86EEF0",
+        "caption" : "B2b3",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=B2b3&cache_key=8F86EEF0",
+        "displayedObservations" : "2512",
+        "environment" : "",
+        "object" : "B2b3",
+        "preview" : "0",
+        "totalObservations" : "2512",
+        "variables" : "33"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

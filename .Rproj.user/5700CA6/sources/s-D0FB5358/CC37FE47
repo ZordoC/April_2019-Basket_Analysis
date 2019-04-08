@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554728511883.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CC37FE47",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1554728511883,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "8178E1DE",
+        "caption" : "B2c",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=B2c&cache_key=8178E1DE",
+        "displayedObservations" : 7323,
+        "environment" : "",
+        "object" : "B2c",
+        "preview" : 0,
+        "totalObservations" : 7323,
+        "variables" : 33
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

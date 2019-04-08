@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554727265607.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B818ED87",
+    "lastKnownWriteTime" : 1554716461,
+    "last_content_update" : 1554727265607,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "480C2D24",
+        "caption" : "DataTran_df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=DataTran_df&cache_key=480C2D24",
+        "displayedObservations" : 9835,
+        "environment" : "",
+        "object" : "DataTran_df",
+        "preview" : 0,
+        "totalObservations" : 9835,
+        "variables" : 125
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

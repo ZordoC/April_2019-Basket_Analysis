@@ -1,134 +1,25 @@
-if(require("pacman")=="FALSE"){
-  install.packages('pacman')
-  library('pacman')
-  pacman::p_load(here, stringr, readxl, plyr, caret, dplyr, doParallel,
-                 lubridate, crayon, corrplot, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
-}
-
-
-library(gdata)
-
 trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",
                          format="basket",sep=",",rm.duplicates = TRUE) 
 
 
+DataToTransf<-as.data.frame(as(trans, "matrix"))
 
+#DataToTransf[DataToTransf==TRUE] <- colnames(DataToTransf)[which(DataToTransf==TRUE, arr.ind=TRUE)[,'col']] 
 
 
-ItemAssociationTable <-  read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/D2T4 by cateogory - Hoja 1(1).csv",header = TRUE,sep = ",")
+B2b <-DataToTransf[BusinessIndices,]
 
 
-DataTran_df<-as.data.frame(as(trans, "matrix"))
+TransObjectBusiness <- as(B2b,'transactions')
 
-ItemAssociationTable[1] <- NULL 
+B2c <- DataToTransf[-BusinessIndices,]
 
 
+TransObjectCustomer <- as(B2c,'transactions')
 
-ItemAssociationTable$Laptops <- NULL
 
 
-select(DataTran_df,)
-
-
-
-colnames(ItemAssociationTable)[1] <- "Laptops"
-
-
-
-
-Laptops <- c("LG Touchscreen Laptop","Acer Aspire","HP Laptop","ASUS Chromebook",
-             "Apple Macbook Pro","Apple MacBook Air","Dell Laptop","Eluktronics Pro Gaming Laptop","Alienware AW17R4-7345SLV-PUS 17  Laptop","HP Notebook Touchscreen Laptop PC")
-
-
-
-apply(DataTran_df,1,)
-
-
-
-
-
-
-ItemAssociationTable$Laptops 
-
-#View(DataTran_df)
-
-
-inspect(trans[1:5])
-
-itemFrequency(trans[,1:5])
-
-#### CSV breakdown  #### 
-
-
-
-
-DataTran_df[DataTran_df==TRUE] <- colnames(DataTran_df)[which(DataTran_df==TRUE, arr.ind=TRUE)[,'col']]
-
-DataTran_df$busimess <- 1
-
-
-DTrue <- DataTran_df +0
-
-
-mutate(DTrue,SmartHome =DTrue$`Apple TV` + DTrue$`Google Home` + DTrue$`Smart Light` +DTrue$`Bulb` + DTrue$`Fire TV` + DTrue$`Stick` + DTrue$`Roku Express`)
-
-
-
-
-DTrue$`Roku Express`
-
-MySum <- rowSums(DTrue)
-
-
-DTrue <-cbind(DTrue,MySum)
-
-summary(MySum)
-
-function(x){
-  
-  
-  
-}
-
-aggregate.data.frame(DTrue,by = list(DTrue$MySum),FUN = max(x))
-
-
-save(BiggerThan6,file = "BiggerThan6.csv")
-
-Vector <- DTrue[,c("MySum")] > 6
-View(Vector)
-
-
-Indices <- which(Vector,TRUE)
-View(Indices)
-
-BiggerThan6 <-DTrue[Indices,]
-
-SmallerThan6 <- DTrue[-Indices,]
-
-
-BiggerThan6$busimess <- 1
-SmallerThan6$busimess <- 0
-
-B2borB2C<-rbind(BiggerThan6,SmallerThan6)
-
-
-transB6 = as(BiggerThan6, "transactions")
-
-
-transB6<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/BiggerThan6.csv",
-                         format="basket",sep=",",rm.duplicates = TRUE) 
-
-
-str(transB6)
-
-
-####Levels####
-
-
-trans@itemInfo$category <- 0
-
-####Indices####
+trans <- TransObjectBusiness 
 
 
 indicesLaptop <- grep(c("Laptop|Aspire|Chromebook|MacBook"),trans@itemInfo$labels)
@@ -142,7 +33,7 @@ indicesMonitor <- grep(c("Monitor"),trans@itemInfo$labels)
 
 
 indicesMiceAndKeyboard <-grep(c("Mouse|Keyboard"),trans@itemInfo$labels)
- 
+
 indicesHardDRives <- grep(c("Hard Drive"),trans@itemInfo$labels)
 
 indicesSpeakers <- grep(c("Speakers|Speaker|Sonos|Cyber Acoustics|DOSS"),trans@itemInfo$labels)
@@ -179,10 +70,15 @@ indicesCombo <- grep(c("Logitech MK550 Wireless Wave Keyboard and Mouse Combo|Lo
 
 indicesComputerHeadPhones <- grep(c("Zombie Gaming Headset|Logitech ClearChat Headset|Panasonic On-Ear Stereo Headphones RP-HT21|PC Gaming Headset|Kensington Headphones|Logitech Stereo Headset|Koss Home Headphones|Microsoft Headset|Ailihen Stereo Headphones|XIBERIA Gaming Headset"),trans@itemInfo$labels)
 
-#### Replacing Values #### 
 
 
-trans@itemInfo$category <- replace(trans@itemInfo$labels,indicesLaptop,"Laptop")
+
+
+#### Levels #### 
+
+
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesLaptop,"Laptop")
 
 trans@itemInfo$category <- replace(trans@itemInfo$category,indicesDesktop,"Desktop")
 
@@ -214,51 +110,14 @@ trans@itemInfo$category <- replace(trans@itemInfo$category,indicesKeyboard,"Keyb
 
 trans@itemInfo$category <- replace(trans@itemInfo$category,indicesCombo,"Keyboard and Mice Combo")
 
-
-
 trans@itemInfo$category <- replace(trans@itemInfo$category,indicesComputerHeadPhones,"Computer Head Phones")
 
 
 
 
+A <- aggregate(trans,trans@itemInfo$category)
 
 
 
-
-
-#### Replace Function
-ReplaceFunction <- function(data,indices,category)
-  
-  {
-  
-  data <- replace(data,indicesComputerHeadPhones,category)
-  
-  
-  data
-}
-
-
-
-ReplaceAllValues <- function() 
-  {
-  
-  
-
-  
-  
-  }
-
-
-trans@itemInfo$category
-#### Test ####
-
-Dataframe <- as.data.frame(trans)
-
-
-
-
-
-
-## 
 
 

@@ -20,11 +20,11 @@ DataToTransf<-as.data.frame(as(trans, "matrix"))
 
 DataToTransf[DataToTransf==TRUE] <- colnames(DataToTransf)[which(DataToTransf==TRUE, arr.ind=TRUE)[,'col']] 
 
-
-ColumnsNames<- colnames(DataTran_df)
-
-DataToTransf$CLIENT <- "Retail"
-ColumnsNames
+# 
+# ColumnsNames<- colnames(DataTrans_df)
+# 
+# DataToTransf$CLIENT <- "Retail"
+# ColumnsNames
 
 
 ##### Manipulate data-frame #####
@@ -134,38 +134,70 @@ for(i in 1:9835){
   
 }
 
+
+
+
+#### Conditions for business #### 
+
+
+DataTran_df<-as.data.frame(as(trans, "matrix"))
+DTrue <- DataTran_df +0
+MySum <- rowSums(DTrue)
+
+DTrue <-cbind(DTrue,MySum)
+Vector <- DTrue[,c("MySum")] > 6
+View(Vector)
+Indices <- which(Vector,TRUE)
+
+
 MoreThan3laptops <- which(laptops >= 3)
-
-
 MoreThan2desktops <- which(desktops >= 3) 
-
-View(MoreThan2desktops)
-
 MoreThan2Printers <-which(printers>=2)
-
 MoreThan3Monitors <-which(monitors>4 )
 
-unite(, col, ..., sep = "_", remove = TRUE)
-
-MoreThan2desktops + MoreThan2Printers
-
-MoreThan2desktops <- as.data.frame(MoreThan2desktops)
-MoreThan2Printers <-  as.data.frame(MoreThan2Printers)
-MoreThan3Monitors <- as.data.frame(MoreThan3Monitors)
-MoreThan3laptops <- as.data.frame(MoreThan3laptops)
 
 
-View(c(MoreThan2desktops,MoreThan3laptops))
+
+
+# MoreThan2desktops <- as.data.frame(MoreThan2desktops)
+# MoreThan2Printers <-  as.data.frame(MoreThan2Printers)
+# MoreThan3Monitors <- as.data.frame(MoreThan3Monitors)
+# MoreThan3laptops <- as.data.frame(MoreThan3laptops)
+
+
+
 
 BusinessIndices <- (c(MoreThan2desktops,MoreThan2Printers,MoreThan3laptops,MoreThan3Monitors))
 
+BIggerThan6 <- Indices 
+
+B2b2 <- Data[Indices,]
+
+B2b <- Data[BusinessIndices,]
+
+B2b <- as.data.frame(B2b)
+
+
+
+  B2b3$rownumber
+
+  B2b3 <- bind_rows(B2b,B2b2)
+
+  B2b3 <- unique(B2b3)
+#### 
+
+B2c <- Data[-B2b3$rownumber,]
+
+B2c <- as.data.frame(B2c)
 
 
 
 
+B2bT <- as(B2b,"transactions")
 
+B2cT <- as(B2c,"transactions")
 
-
+str(B2cT)
 
 # duprows <- which(!is.na(match(rownames(bar),rownames(foo))))
 # rbind(foo,bar[-duprows,])
@@ -173,16 +205,16 @@ BusinessIndices <- (c(MoreThan2desktops,MoreThan2Printers,MoreThan3laptops,MoreT
 
 trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",
                          format="basket",sep=",",rm.duplicates = TRUE) 
+indicesLa
 
 
+trans@itemInfo$category <- replace(trans@itemInfo$category,indiceslaptop,"Laptop")
 
-trans@itemInfo$category <- replace(trans@itemInfo$labels,indiceslaptops,"Laptop")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,desktops,"Desktop")
+trans@itemInfo$category <- replace(trans@itemInfo$category,desktop,"Desktop")
 
 trans@itemInfo$category <- replace(trans@itemInfo$category,Drives,"Hard-Drive")
 
-trans@itemInfo$category <- replace(trans@itemInfo$category,monitors,"Monitor")
+trans@itemInfo$category <- replace(trans@itemInfo$category,Monitor,"Monitor")
 
 trans@itemInfo$category <- replace(trans@itemInfo$category,Speakers,"Speakers")
 
@@ -209,14 +241,19 @@ trans@itemInfo$category <- replace(trans@itemInfo$category,Keyboard,"Keyboard")
 trans@itemInfo$category <- replace(trans@itemInfo$category,Combo,"Keyboard and Mice Combo")
 
 
+rm(A)
 
 
+str(trans)
 
 A <- aggregate(trans,trans@itemInfo$category)
 
 
-A
+Rule <-apriori(A,parameter=list(supp= 0.2,conf=0.8,minlen=))
 
+
+
+inspect(Rule[1:10])
 #### To matrix ####
 # Matrix <-as.data.frame(as(TransObject, "matrix"))
 # 
