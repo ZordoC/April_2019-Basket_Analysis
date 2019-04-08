@@ -219,6 +219,13 @@ trans@itemInfo$category <- replace(trans@itemInfo$category,indicesCombo,"Keyboar
 trans@itemInfo$category <- replace(trans@itemInfo$category,indicesComputerHeadPhones,"Computer Head Phones")
 
 
+
+
+
+
+
+
+
 #### Replace Function
 ReplaceFunction <- function(data,indices,category)
   

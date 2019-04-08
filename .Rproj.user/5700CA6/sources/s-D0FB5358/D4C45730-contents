@@ -15,12 +15,15 @@ trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/Elec
                          format="basket",sep=",",rm.duplicates = TRUE) 
 
 #### Get product Names into a vector ####
-DataTran_df<-as.data.frame(as(trans, "matrix"))
+DataToTransf<-as.data.frame(as(trans, "matrix"))
+
+
+DataToTransf[DataToTransf==TRUE] <- colnames(DataToTransf)[which(DataToTransf==TRUE, arr.ind=TRUE)[,'col']] 
 
 
 ColumnsNames<- colnames(DataTran_df)
 
-
+DataToTransf$CLIENT <- "Retail"
 ColumnsNames
 
 
@@ -81,19 +84,15 @@ Names <- replace(Names,ComputerHeadPhones,"Computer Headphone")
 ####Split ####
 DataReady <- cbind(DataReady,Names)
 
-DataByCategory <- DataReady[,c(1,4)]
+DataByCategory <- DataReady[,c(1,3,4)]
 
 
-AggPosData2 <- split(DataByCategory$Names,DataByCategory$rownumber)
-
-head(AggPosData2)
-
-TransObject<-as(AggPosData2,'transactions')
-
-
-count <- c()
-
-ifelse
+# AggPosData2 <- split(DataByCategory$Names,DataByCategory$rownumber)
+# 
+# head(AggPosData2)
+# 
+# TransObject<-as(AggPosData2,'transactions')
+# 
 
 laptops <- c()
 
@@ -105,8 +104,7 @@ laptops
 
 }
 
-
-desktops <- c()
+ desktops <- c()
 
 for(i in 1:9835){
   
@@ -115,7 +113,7 @@ for(i in 1:9835){
   desktops
   
 }
-
+ 
 printers <- c()
 
 for(i in 1:9835){
@@ -126,41 +124,118 @@ for(i in 1:9835){
   
 }
 
-
 monitors <- c()
 
 for(i in 1:9835){
   
-  monitors[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="monitors")
+  monitors[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Monitor")
   
   monitors
   
 }
 
+MoreThan3laptops <- which(laptops >= 3)
 
-itemFrequencyPlot(DataByCategory)
+
+MoreThan2desktops <- which(desktops >= 3) 
+
+View(MoreThan2desktops)
+
+MoreThan2Printers <-which(printers>=2)
+
+MoreThan3Monitors <-which(monitors>4 )
+
+unite(, col, ..., sep = "_", remove = TRUE)
+
+MoreThan2desktops + MoreThan2Printers
+
+MoreThan2desktops <- as.data.frame(MoreThan2desktops)
+MoreThan2Printers <-  as.data.frame(MoreThan2Printers)
+MoreThan3Monitors <- as.data.frame(MoreThan3Monitors)
+MoreThan3laptops <- as.data.frame(MoreThan3laptops)
 
 
+View(c(MoreThan2desktops,MoreThan3laptops))
+
+BusinessIndices <- (c(MoreThan2desktops,MoreThan2Printers,MoreThan3laptops,MoreThan3Monitors))
+
+
+
+
+
+
+
+
+
+# duprows <- which(!is.na(match(rownames(bar),rownames(foo))))
+# rbind(foo,bar[-duprows,])
+
+
+trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",
+                         format="basket",sep=",",rm.duplicates = TRUE) 
+
+
+
+trans@itemInfo$category <- replace(trans@itemInfo$labels,indiceslaptops,"Laptop")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,desktops,"Desktop")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Drives,"Hard-Drive")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,monitors,"Monitor")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Speakers,"Speakers")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Tablets,"Tablets")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Cables,"Cables")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,ActiveHeadPhones,"Active HeadPhones")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Acessories,"Acessories")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Printers,"Printers")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,PrintersINk,"Printers Ink")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,CStands,"Computer Stands")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,SmartHome,"Smart Home Devices")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Mouse,"Mice")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Keyboard,"Keyboard")
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,Combo,"Keyboard and Mice Combo")
+
+
+
+
+
+A <- aggregate(trans,trans@itemInfo$category)
+
+
+A
 
 #### To matrix ####
-Matrix <-as.data.frame(as(TransObject, "matrix"))
-
-
-#Matrix[Matrix==TRUE] <- colnames(Matrix)[which(Matrix==TRUE, arr.ind=TRUE)[,'col']]
-
- Matrix <- Matrix +0
- 
- 
- Sum <- apply(Matrix,1,sum)
+# Matrix <-as.data.frame(as(TransObject, "matrix"))
 # 
-Matrix <- cbind(Matrix,Sum)
 # 
- aggregate(TransObject,)
- 
- 
-str(trans)
-trans@itemInfo$labels
-
-level1<- itemInfo(trans@itemInfo$labels)[["level1"]]
-
- 
+# #Matrix[Matrix==TRUE] <- colnames(Matrix)[which(Matrix==TRUE, arr.ind=TRUE)[,'col']]
+# 
+#  Matrix <- Matrix +0
+#  
+#  
+#  Sum <- apply(Matrix,1,sum)
+# # 
+# Matrix <- cbind(Matrix,Sum)
+# # 
+#  aggregate(TransObject,)
+#  
+#  
+# str(trans)
+# trans@itemInfo$labels
+# 
+# level1<- itemInfo(trans@itemInfo$labels)[["level1"]]
+# 
+#  

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554716076332.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9AB5FA89",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1554716076332,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "2679E4FD",
+        "caption" : "MoreThan2desktops",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=MoreThan2desktops&cache_key=2679E4FD",
+        "displayedObservations" : 945,
+        "environment" : "",
+        "object" : "MoreThan2desktops",
+        "preview" : 0,
+        "totalObservations" : 945,
+        "variables" : 1
+    },
+    "relative_order" : 16,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

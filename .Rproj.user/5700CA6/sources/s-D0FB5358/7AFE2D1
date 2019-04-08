@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554709842818.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7AFE2D1",
+    "lastKnownWriteTime" : 1554708766,
+    "last_content_update" : 1554709842818,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "6A887024",
+        "caption" : "Matrix",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Matrix&cache_key=6A887024",
+        "displayedObservations" : 9833,
+        "environment" : "",
+        "object" : "Matrix",
+        "preview" : 0,
+        "totalObservations" : 9833,
+        "variables" : 20
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

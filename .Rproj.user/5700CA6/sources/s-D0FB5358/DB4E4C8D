@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554715031656.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DB4E4C8D",
+    "lastKnownWriteTime" : 1554713878,
+    "last_content_update" : 1554715031656,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "9CAFA6DE",
+        "caption" : "BusinessTransactions",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=BusinessTransactions&cache_key=9CAFA6DE",
+        "displayedObservations" : "945",
+        "environment" : "",
+        "object" : "BusinessTransactions",
+        "preview" : "0",
+        "totalObservations" : "945",
+        "variables" : "4"
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
