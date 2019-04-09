@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554655130611.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1101223216",
+    "id" : "D4C45730",
+    "lastKnownWriteTime" : 1554739556,
+    "last_content_update" : 1554798071840,
+    "path" : "~/Documents/Ubiqum/R-M2Task4/RM2T4/TheFinalApproach.R",
+    "project_path" : "TheFinalApproach.R",
+    "properties" : {
+        "cursorPosition" : "341,0",
+        "docOutlineSize" : "76.8894967919832",
+        "docOutlineVisible" : "0",
+        "scrollLine" : "322",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

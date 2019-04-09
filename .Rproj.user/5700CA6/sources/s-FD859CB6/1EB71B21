@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554736428521.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1EB71B21",
+    "lastKnownWriteTime" : 3612485182329729312,
+    "last_content_update" : 1554736428521,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B0AB1B41",
+        "caption" : "Vector",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Vector&cache_key=B0AB1B41",
+        "displayedObservations" : "9835",
+        "environment" : "",
+        "object" : "Vector",
+        "preview" : "0",
+        "totalObservations" : "9835",
+        "variables" : "1"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
