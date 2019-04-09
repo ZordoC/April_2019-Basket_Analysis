@@ -1,0 +1,2 @@
+"0","Business2BusinessTransactionObj <- as(Business2Business,'transactions')"
+"0","Business2CustomerTransactionObj <- as(Business2Customer,'transactions')"
