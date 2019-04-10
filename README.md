@@ -11,7 +11,7 @@
 <head>
 
 
-  <title>How to use this git </title>
+How to use this git 
 
 
 </head>

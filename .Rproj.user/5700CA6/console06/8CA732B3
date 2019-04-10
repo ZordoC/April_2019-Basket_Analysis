@@ -46,3 +46,76 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ gid [K[Kt checkout [K[K[K[K[K[K[K[K[Kadd -A
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git statud
+git: 'statud' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git statud[Ks
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[32mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+	[32mmodified:   README.md[m
+	[32mrenamed:    Scripts/TheFinalApproach.R -> Scripts/Step1-TheFinalApproach.R[m
+	[32mrenamed:    Scripts/B2C.R -> Scripts/Step2-B2C.R[m
+	[32mrenamed:    Scripts/B2B script.R -> Scripts/Step3-B2B[m
+	[32mnew file:   data/ElectronidexTransactions2017(1).csv[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit 
+hint: Waiting for your editor to close the file... [?2004h[23;0;0t[?2004l
+[1]+  Stopped                 git commit
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit -m Pr[K[KReadMe [KExperiment
+[master f43ea14] ReadMeExperiment
+ 7 files changed, 9921 insertions(+), 3 deletions(-)
+ rewrite .Rproj.user/5700CA6/console06/INDEX001 (87%)
+ rename Scripts/{TheFinalApproach.R => Step1-TheFinalApproach.R} (100%)
+ rename Scripts/{B2C.R => Step2-B2C.R} (100%)
+ rename Scripts/{B2B script.R => Step3-B2B} (100%)
+ create mode 100644 data/ElectronidexTransactions2017(1).csv
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ gt[Kit push
+Username for 'https://github.com': ZordoX
+Password for 'https://ZordoX@github.com': 
+[2]+  Stopped                 git push
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git piush[K[K[K[Kush
+Username for 'https://github.com': ZordoX C
+Password for 'https://ZordoC@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZordoC/RM2T4.git/'
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git push
+Username for 'https://github.com': ZordoC
+Password for 'https://ZordoC@github.com': 
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 89.68 KiB | 2.42 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)   [Kremote: Resolving deltas:  33% (1/3)   [Kremote: Resolving deltas:  66% (2/3)   [Kremote: Resolving deltas: 100% (3/3)   [Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+remote: This repository moved. Please use the new location:[K
+remote:   https://github.com/ZordoC/Basket-Analysis.git[K
+To https://github.com/ZordoC/RM2T4.git
+   a586370..f43ea14  master -> master
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git pushcommit -m ReadMeExperiment[K[1Pstatusdadd -Astatusadd -Astatus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+	[31mmodified:   README.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status[2Ppushcommit -m ReadMeExperiment[K[1Pstatusdadd -Astatusadd -A
