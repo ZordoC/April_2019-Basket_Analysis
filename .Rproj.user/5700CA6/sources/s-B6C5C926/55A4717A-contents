@@ -1,0 +1,8 @@
+Rules<- apriori (trans, parameter = list(supp = 0.0001, conf = 0.5,  minlen=2))
+
+
+B2b_cat<-aggregate(Rules, by="category")
+
+
+
+ruleExplorer(B2b_cat)

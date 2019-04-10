@@ -1,0 +1,6 @@
+"0","Business2Business <- read.csv(file = ""/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/B2b4real"", header = TRUE)"
+"0","Business2Customer <- read.csv(file = ""/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/B2cReal"",header = TRUE)"
+"0","#### Removing unwanted columns, before transforming into a transactional object."
+"0","Business2Business <- Business2Business[,-1]"
+"0","Business2Business <- Business2Business[,-126]"
+"0","Business2Customer <- Business2Customer[,-1]"

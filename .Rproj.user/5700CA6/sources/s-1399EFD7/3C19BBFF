@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554824958478.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3C19BBFF",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1554824958478,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F4D7BC6E",
+        "caption" : "B2b4real",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=B2b4real&cache_key=F4D7BC6E",
+        "displayedObservations" : 2512,
+        "environment" : "",
+        "object" : "B2b4real",
+        "preview" : 0,
+        "totalObservations" : 2512,
+        "variables" : 127
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
