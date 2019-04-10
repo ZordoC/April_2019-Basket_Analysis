@@ -1,4 +1,4 @@
-# Basket Analysis
+# How to use the repository 
 
 
 
@@ -11,9 +11,6 @@
 </br>
 
 <head>
-
-
- <title> How to use this git </title>
 
 
 </head>
