@@ -6,16 +6,21 @@
 
 <html>
 
-
+</br>
+</br>
+</br>
 
 <head>
 
 
-How to use this git 
+ <title> How to use this git </title>
 
 
 </head>
 
+</br>
+</br>
+</br>
 
 <body>
 
