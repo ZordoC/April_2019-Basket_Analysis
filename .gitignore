@@ -15,10 +15,10 @@ src/gwt/tools/pdfjs/
 src/gwt/tools/xterm.js/
 src/gwt/.ant-targets-build.xml
 /src/gwt/.gwt/.gwt-log
-.Rproj.user
-.Rhistory
-.RData
-.Rprofile
+.Rproj.user/
+.Rhistory/
+.RData/
+.Rprofile/
 /src/gwt/bin.test/
 /src/gwt/gwt-unitCache/
 NEWS.html
