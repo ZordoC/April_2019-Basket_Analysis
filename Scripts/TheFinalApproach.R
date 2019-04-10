@@ -2,38 +2,34 @@ if(require("pacman")=="FALSE"){
   install.packages('pacman')
   library('pacman')
   pacman::p_load(here, stringr, readxl, plyr, caret, dplyr, doParallel,
-                 lubridate, crayon, corrplot, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
+                 lubridate, crayon, corrplot,rstudioapi, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
 }
 
 
 library(gdata)
 
-Data<-read.csv("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",
+
+current_path=getActiveDocumentContext()$path
+setwd(dirname(current_path))
+setwd("..")
+rm(current_path)
+
+
+Data<-read.csv("data/ElectronidexTransactions2017.csv",
                          header=FALSE,sep=",") 
 
-write(laptops, file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/laptopindcies.csv") 
-write(monitors, file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/monitorsindicies.csv" )
-write(printers,file  ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/printerindiices.csv")
-write(desktops,file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/desktopindices.csv")
-
-
-trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",
+trans<-read.transactions("data/ElectronidexTransactions2017.csv",
                          format="basket",sep=",",rm.duplicates = TRUE) 
 
 
 
 
 #### Get product Names into a vector ####
-DataToTransf<-as.data.frame(as(trans, "matrix"))
+
+#DataToTransf<-as.data.frame(as(trans, "matrix"))
+#DataToTransf[DataToTransf==TRUE] <- colnames(DataToTransf)[which(DataToTransf==TRUE, arr.ind=TRUE)[,'col']] 
 
 
-DataToTransf[DataToTransf==TRUE] <- colnames(DataToTransf)[which(DataToTransf==TRUE, arr.ind=TRUE)[,'col']] 
-
-# 
-# ColumnsNames<- colnames(DataTrans_df)
-# 
-# DataToTransf$CLIENT <- "Retail"
-# ColumnsNames
 
 
 ##### Manipulate data-frame #####
@@ -98,54 +94,44 @@ DataReady <- cbind(DataReady,Names)
 
 DataByCategory <- DataReady[,c(1,3,4)]
 
-
-# AggPosData2 <- split(DataByCategory$Names,DataByCategory$rownumber)
-# 
-# head(AggPosData2)
-# 
-# TransObject<-as(AggPosData2,'transactions')
-# 
-
-
-laptops <- c()
+ laptops <- c()
 
 for(i in 1:9835){
 
-laptops[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Laptop")
+ laptops[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Laptop")
 
-laptops
+ laptops
 
 }
+  desktops <- c()
 
- desktops <- c()
+ for(i in 1:9835){
 
-for(i in 1:9835){
-  
-  desktops[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Desktop")
-  
-  desktops
-  
-}
- 
-printers <- c()
+   desktops[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Desktop")
 
-for(i in 1:9835){
-  
-  printers[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Printer")
-  
-  
-  
-}
+   desktops
 
-monitors <- c()
+ }
 
-for(i in 1:9835){
-  
-  monitors[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Monitor")
-  
-  monitors
-  
-}
+ printers <- c()
+
+ for(i in 1:9835){
+
+   printers[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Printer")
+
+
+
+ }
+
+ monitors <- c()
+
+ for(i in 1:9835){
+
+   monitors[i] <-sum(DataByCategory$rownumber == i  & DataByCategory =="Monitor")
+
+   monitors
+
+ }
 
 
 
@@ -154,12 +140,14 @@ for(i in 1:9835){
 
 
 DataTran_df<-as.data.frame(as(trans, "matrix"))
+
+
+
 DTrue <- DataTran_df +0
 MySum <- rowSums(DTrue)
 
 DTrue <-cbind(DTrue,MySum)
 Vector <- DTrue[,c("MySum")] > 6
-View(Vector)
 Indices <- which(Vector,TRUE)
 
 
@@ -171,172 +159,49 @@ MoreThan3Monitors <-which(monitors>4 )
 
 
 
-
-# MoreThan2desktops <- as.data.frame(MoreThan2desktops)
-# MoreThan2Printers <-  as.data.frame(MoreThan2Printers)
-# MoreThan3Monitors <- as.data.frame(MoreThan3Monitors)
-# MoreThan3laptops <- as.data.frame(MoreThan3laptops)
-
-
-
-
 BusinessIndices <- (c(MoreThan2desktops,MoreThan2Printers,MoreThan3laptops,MoreThan3Monitors))
+Indices
 
-BIggerThan6 <- Indices 
 
-B2b2 <- Data[Indices,]
+DataTran_df$rownumber <- 1:nrow(Data)   
 
-B2b <- Data[BusinessIndices,]
+B2b2 <- DataTran_df[Indices,]
 
-BusinessIndices1 <- as.data.frame(BusinessIndices)
-Indices1 <- as.data.frame(Indices)
+B2b <- DataTran_df[BusinessIndices,]
+
+B2b3 <- bind_rows(B2b,B2b2)
+
+
+  B2b3 <- unique(B2b3)
 
   B2b3$rownumber
+ 
 
-  
-
-  
-  B2b3 <- unique(B2b3)
-  
-B2b3  
-  
 #### 
 
-B2c <- Data[-B2b3$rownumber,]
-
-B2c <- as.data.frame(B2c)
+B2c <- DataTran_df[-B2b3$rownumber,]
 
 
 
+#### cut the row number 
 
-B2bT <- as(B2b,"transactions")
+B2c <- B2c[-126]
+
+
+B2b3 <- B2b3[-126]
+
+B2bT <- as(B2b3,"transactions")
 
 B2cT <- as(B2c,"transactions")
 
 
-write.csv(B2b3,file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2b.csv")
 
-write.csv(B2c,file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2c.csv")
-
-
-# duprows <- which(!is.na(match(rownames(bar),rownames(foo))))
-# rbind(foo,bar[-duprows,])
-
-
-trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv",
-                         format="basket",sep=",",rm.duplicates = TRUE) 
-indicesLa
-
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,indiceslaptop,"Laptop")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,desktop,"Desktop")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Drives,"Hard-Drive")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Monitor,"Monitor")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Speakers,"Speakers")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Tablets,"Tablets")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Cables,"Cables")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,ActiveHeadPhones,"Active HeadPhones")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Acessories,"Acessories")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Printers,"Printers")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,PrintersINk,"Printers Ink")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,CStands,"Computer Stands")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,SmartHome,"Smart Home Devices")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Mouse,"Mice")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Keyboard,"Keyboard")
-
-trans@itemInfo$category <- replace(trans@itemInfo$category,Combo,"Keyboard and Mice Combo")
-
-
-rm(A)
-
-
-str(trans)
-
-A <- aggregate(trans,trans@itemInfo$category)
-
-
-Rule <-apriori(A,parameter=list(supp= 0.2,conf=0.8,minlen=))
-
-
-
-inspect(Rule[1:10])
-#### To matrix ####
-# Matrix <-as.data.frame(as(TransObject, "matrix"))
-# 
-# 
-# #Matrix[Matrix==TRUE] <- colnames(Matrix)[which(Matrix==TRUE, arr.ind=TRUE)[,'col']]
-# 
-#  Matrix <- Matrix +0
-#  
-#  
-#  Sum <- apply(Matrix,1,sum)
-# # 
-# Matrix <- cbind(Matrix,Sum)
-# # 
-#  aggregate(TransObject,)
-#  
-#  
-# str(trans)
-# trans@itemInfo$labels
-# 
-# level1<- itemInfo(trans@itemInfo$labels)[["level1"]]
-# 
-
-
-
-
-
-Business1234<-as.data.frame(as(trans, "matrix"))
-
-
-# Business1234 <-Business1234[BusinessIndices,] 
-# 
-# 
-# 
-# B2b2 <- Business1234[Indices,]
-# 
-# 
-# 
-# B2b9 <- bind_rows(Business1234,B2b2)
-# 
-# B2b9 <- unique(B2b9)
-
-
-# B2cN <- Business1234[-BusinessIndices,]
-# 
-# B2cN1 <- Business1234[-Indices,]
-
-
-B2c <- Business1234[-B2b3$rownumber,]
-
-
-write.csv(B2c,file="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2cReal")
-
-# B2cReal <- bind_rows(B2cN,B2cN1)
-# 
-# B2cReal <- unique(B2c)
-
-write.csv(B2b9,file= "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/B2bReal")
-
-B2b9OBj1 <- as(B2b9,"transactions")
-
-
-
-
-
-
-#  
+rm(B2b)
+rm(B2b2)
+rm(Data)
+rm(DataByCategory)
+rm(DataReady)
+rm(DataTran_df)
+rm(DTrue)
+rm(trans)
+rm(DataToTransf)
