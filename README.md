@@ -19,6 +19,8 @@
   <li>Link for technical report is in the end of this Markdown</li>	
 </ul> 
 
+</br>
+</br>
 
 		http://rpubs.com/Zordo/484630
 
