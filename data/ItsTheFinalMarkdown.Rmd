@@ -1,7 +1,7 @@
 ---
-title: "Technical Report for Basket Analysis for BlackWell"
+title: "Basket Analysis for BlackWell"
 
-author: "José, Kiko, Sergi"
+author: "José Pedro Conceição,Kiko Sánchez , Eloi Cirera"
 date: "March 25, 2019"
 output: 
 
@@ -10,6 +10,7 @@ output:
     toc_depth: 5
     toc_float: true
     theme: "cerulean" 
+    
 ---
 
 
@@ -31,23 +32,17 @@ trans<-read.transactions("/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/Elec
 </br>
 </br>
 </br>
-</br>
-</br>
 
-## Pre-process 
+## Technical Report
 
-</br>
-</br>
-</br>
 
-### Data-Transformation
-
+### Pre-process 
 </br>
 </br>
-My first step was to transform the data into a data-frame where I would feel more confortable to work with.
+First things first, we need to have ou data organized in a way we can manipulate it easy(or in a way we know how)
 </br>
 </br>
-```{r , warning=FALSE }
+```{r}
 Data$rownumber <- 1:nrow(Data)
 
 DataReady <- melt(Data,"rownumber")
@@ -58,125 +53,72 @@ DataReady <-  DataReady %>%  filter(value != "") %>%
 ```
 </br>
 </br>
-The result was a dataframe that looked like this:
-</br>
-</br>
-</br>
+This line of code transforms the data into the following format 
+
 ```{r}
  DataReady[1:10,]
 ```
 </br>
 </br>
+Now that we have the data in a way we can work on it, we can start splitting the data,we chose to split the data by customer type (B2B,B2C) 
+</br>
+For that I first changed the product names by their respective categories provided in the pdf file, and made rules to decided if it's a business or a customer transaction.
+</br>
+</br>
 
-### Split
-
-</br>
-</br>
-There are different types of customers, one example are B2B and B2C formats (Business to Business & Business to Customer).These two types of customers have different buying patterns, companies normally buy in bulk while customers buy less items per transaction.Knowing this,I splitted the data into two different data-frames.
-</br>
-</br>
-My split decision was very straightforward,if people buy more than x laptos,desktops,monitors,printers and more than 6 items
-</br>
-</br>
-To achieve the desirable split,I had to indentify the indicies of the original dataframe that had each different categorie. I followed the pdf provided for category selection.
-</br>
-</br>
 ```{r}
-
-#### Indices ####
-
 Laptop <- grep(c("Laptop|Aspire|Chromebook|MacBook"),DataReady$value)
-
 Desktop <- grep(c("Desktop|iMac"),DataReady$value)
-
 Tablets <- grep(c("iPad|Tablet|Tab|kindle"),DataReady$value)
-
 Monitor <- grep(c("Monitor"),DataReady$value)
-
 Drives <- grep(c("Hard Drive"),DataReady$value)
-
 Speakers <- grep(c("Speakers|Speaker|Sonos|Cyber Acoustics|DOSS"),DataReady$value)
-
 Cables <- grep(c("Cable|HDMI Adapter"),DataReady$value)
-
-ActiveHeadPhones <- grep(c("Apple Earpods|Monster Beats|Wireless Sports|In-Ear|APIE|Panasonic On-Ear 
-                           Stereo Headphones RP-HT21|Philips Flexible Earhook Headphone|Panasonic On-Ear Stereo Headphones"),DataReady$value)
-
+ActiveHeadPhones <- grep(c("Apple Earpods|Monster Beats|Wireless Sports|In-Ear|APIE|Panasonic On-Ear Stereo Headphones RP-HT21|Philips Flexible Earhook Headphone|Panasonic On-Ear Stereo Headphones"),DataReady$value)
 Acessories <- grep(c("Microsoft Office Home and Student 2016|Computer Game|Belkin Mouse Pad|Large Mouse Pad"),DataReady$value)
-
 Printers <- grep(c("Epson Printer|HP Wireless Printer|Canon Office Printer|Brother Printer|DYMO Label Manker"),DataReady$value)
-
 PrintersINk <- grep(c("Epson Black Ink|HP Black & Tri-color Ink|Canon Ink|Brother Printer Toner|DYMO Labeling Tape"),DataReady$value)
-
 CStands <- grep(c("Halter Acrylic Monitor Stand|Height-Adjustable|Multi Media Stand|Full Motion Monitor Mount"),DataReady$value)
-
 SmartHome <- grep(c("Apple TV|Google Home|Smart Light Bulb|Fire TV Stick|Roku Express"),DataReady$value)
-
 Mouse <- grep(c("3-Button Mouse|Logitech Wireless Mouse|Logitech 3-button Mouse|Redragon Gaming Mouse|HP Wireless Mouse|Generic Black 3-Button|Slim Wireless Mouse|Microsoft Basic Optical Mouse|Wireless Portable Mouse|Gaming Mouse Professional"),DataReady$value)
-
 Keyboard <- grep(c("HP USB Keyboard|Logitech Wireless Keyboard|Rii LED Keyboard|Logitech Keyboard|Backlit LED Gaming Keyboard|Dell Wired Keyboard|Apple Wired Keyboard|Apple Wireless Keyboard|Apple Magic Keyboard"),DataReady$value)
-
 Combo <- grep(c("Logitech MK550 Wireless Wave Keyboard and Mouse Combo|Logitech Desktop MK120 Mouse and keyboard Combo|Logitech MK270 Wireless Keyboard and Mouse Combo|Dell KM117 Wireless Keyboard & Mouse|EagleTec Wireless Combo Keyboard and Mouse|Microsoft Wireless Comfort Keyboard and Mouse|Microsoft Wireless Desktop Keyboard and Mouse|Rii LED Gaming Keyboard & Mouse Combo|Logitech MK360 Wireless Keyboard and Mouse Combo"),DataReady$value)
-
 ComputerHeadPhones <- grep(c("Zombie Gaming Headset|Logitech ClearChat Headset|Panasonic On-Ear Stereo Headphones RP-HT21|PC Gaming Headset|Kensington Headphones|Logitech Stereo Headset|Koss Home Headphones|Microsoft Headset|Ailihen Stereo Headphones|XIBERIA Gaming Headset"),DataReady$value)
 
 
 ```
 </br>
 </br>
+This grabs the indices for each different product name.
 </br>
-</br>
-Now I just need to replace all of the indices, with the desirable category name.
-I created a dummy column with all the different products (from the original frame), and replaced all the product names with their specific categories.
-</br>
-</br>
+Now with the indices we just need to replace the specific indices with the respective category as we want it o appear.
+It should look something like this:
 </br>
 </br>
 ```{r}
-
 DataReady$value -> Names
-
-
 Names <- replace(Names,Laptop,"Laptop")
-
 Names <- replace(Names,Desktop,"Desktop")
-
 Names <- replace(Names,Tablets,"Tablet")
-
 Names <- replace(Names,Monitor,"Monitor")
-
 Names <- replace(Names,Keyboard,"Keyboard")
-
 Names <- replace(Names,Drives,"Driver")
-
 Names <- replace(Names,Speakers,"Speakers")
-
 Names <- replace(Names,Cables,"Cables")
-
 Names <- replace(Names,Combo,"Combo")
-
 Names <- replace(Names,ActiveHeadPhones,"Active Headphone")
-
 Names <- replace(Names,Acessories,"Acessories")
-
 Names <- replace(Names,Printers,"Printer")
-
 Names <- replace(Names,PrintersINk,"Printer Ink")
-
 Names <- replace(Names,CStands,"Computer Stand")
-
 Names <- replace(Names,SmartHome,"Smart-Home Device")
-
 Names <- replace(Names,Mouse,"Mice")
-
 Names <- replace(Names,ComputerHeadPhones,"Computer Headphone")
-
 ```
 </br>
 </br>
-Next I created a new dataframe with only the categories
+Data by category
 </br>
-The output is as shown below
 </br>
 ```{r}
 DataReady <- cbind(DataReady,Names)
@@ -189,8 +131,7 @@ DataByCategory[1:10,]
 
 </br>
 </br>
-After that we just need to know how many laptos,desktops, monitors and printers exist per transaction.
-We can achieve this by looping through the entire data-frame , and storing in a vector the sum in the rownumber(transaction) and by the name of the specific category. 
+So now we just need to know which transactions have laptops, desktops etc . We can do this with the following code.
 </br>
 </br>
 
@@ -238,16 +179,15 @@ We can achieve this by looping through the entire data-frame , and storing in a 
 ```
 
 </br>
-I found this method quiete resourse exhausting, I am sure we can achieve the same goals with the apply family function,and without so much computer power required, however I could not make it work because we are actually "comparing multiple rows at once" (transaction), for the sake of simplicity I did it this way.
+For the sake of compiling this markdown, I will just load my already cutted files, the logic is the same,the problem is that it takes 10 minutes for this 4 loops, and it's not efficient to do it this way.
 </br>
 </br>
-Note:The code is commented, because it takes 10-15 minutes to compile, and trying to edit a markdown, with every knitting attempt taking 10-15 minutes is non sense.
 </br>
-</br>
+Now with the indices we just need to subset the data with some rules we define ourselves freely.
 </br>
 </br>
 ```{r}
-
+# 
 # DataTran_df<-as.data.frame(as(trans, "matrix"))
 # DTrue <- DataTran_df +0
 # MySum <- rowSums(DTrue)
@@ -290,130 +230,107 @@ Note:The code is commented, because it takes 10-15 minutes to compile, and tryin
 ```
 </br>
 </br>
-For compiling time savings, I just read two csv files that I had previously spilitted from the orginal one.
+For the sake of time-saving I will read the already saved csv file,otherwise would take me 15 minuts for each knit, which for doing your report is very time consuming. 
 </br>
 </br>
 ```{r}
 
-#Business2Business <- read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/sample.txt")
+Business2Business <- read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/B2b4real", header = TRUE)
 
+Business2Customer <- read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/B2cReal")
 
-#Business2Customer <- read.csv(file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/B2cReal")
+Business2Business <- Business2Business[,-1]
 
+Business2Business <- Business2Business[,-126]
 
-#### Removing unwanted columns, before transforming into a transactional object.
-
-
-#Business2Business <- Business2Business[,-1]
-
-#Business2Business <- Business2Business[,-126]
-
-#Business2Customer <- Business2Customer[,-1]
+Business2Customer <- Business2Customer[,-1]
 
 
 ```
 </br>
 </br>
-Reading the data-frame as a transactional object.
+Now we just need to transform our dataframes into transactional objects and add a category level
 </br>
 </br>
 ```{r}
-#Business2BusinessTransactionObj <- as(Business2Business,'transactions')
+Business2BusinessTransactionObj <- as(Business2Business,'transactions')
 
-#Business2CustomerTransactionObj <- as(Business2Customer,'transactions')
+Business2CustomerTransactionObj <- as(Business2Customer,'transactions')
 
 ```
 </br>
 </br>
 </br>
 </br>
-Adding a new categories level inside the transactional object.
-</br>
-So I had a fomatting problem when reading the saved dataframes, they would appear with an X.Name of product, which after will gives us problems in the transactional object.
-You could substitue all the names and put X in front of them, but a quick workaround is to upload the data, with the import DataSet built in Rstudio.
-
+Now we just add new a level in itemInfo, called itemcategory.
 </br>
 </br>
 ```{r}
-# transB<-as(Business2Business, "transactions")
-# 
-# 
-# #####1.CATEGORIZE LEVEL#####
-# indicesLaptop <- grepl(c("Laptop|Aspire|Chromebook|MacBook"),transB@itemInfo$labels)
-# indicesDesktop <- grepl(c("Desktop|iMac"),transB@itemInfo$labels)
-# indicesTablets <- grepl(c("iPad|Tablet|Tab|Kindle"),transB@itemInfo$labels)
-# indicesMonitor <- grepl(c("Monitor"),transB@itemInfo$labels)
-# indicesMiceAndKeyboard <-grepl(c("Mouse|Keyboard"),transB@itemInfo$labels)
-# indicesHardDRives <- grepl(c("Hard Drive"),transB@itemInfo$labels)
-# indicesSpeakers <- grepl(c("Speakers|Speaker|Sonos|Cyber Acoustics|DOSS"),transB@itemInfo$labels)
-# indicesCables <- grepl(c("Cable|HDMI Adapter"),transB@itemInfo$labels)
-# indicesCombo <- grepl(c("Combo"),transB@itemInfo$labels)
-# indicesActiveHeadPhones <- grepl(c("Apple Earpods|Monster Beats|Wireless Sports|In-Ear|APIE|Panasonic On-Ear Stereo Headphones RP-HT21|Philips Flexible Earhook Headphone|Panasonic On-Ear Stereo Headphones"),transB@itemInfo$labels)
-# indicesAcessories <- grepl(c("Microsoft Office Home and Student 2016|Computer Game|Belkin Mouse Pad|Large Mouse Pad"),transB@itemInfo$labels)
-# indicesPrinters <- grepl(c("Epson Printer|HP Wireless Printer|Canon Office Printer|Brother Printer|DYMO Label Manker"),transB@itemInfo$labels)
-# indicesPrintersINk <- grepl(c("Epson Black Ink|HP Black & Tri-color Ink|Canon Ink|Brother Printer Toner|DYMO Labeling Tape"),transB@itemInfo$labels)
-# indicesCStands <- grepl(c("Halter Acrylic Monitor Stand|Height-Adjustable Standing Desk|Multi Media Stand|Full Motion Monitor Mount"),transB@itemInfo$labels)
-# indicesSmartHome <- grepl(c("Apple TV|Google Home|Smart Light Bulb|Fire TV Stick|Roku Express"),transB@itemInfo$labels)
-# indicesMouse <- grepl(c("3-Button Mouse|Logitech Wireless Mouse|Logitech 3-button Mouse|Redragon Gaming Mouse|HP Wireless Mouse|Generic Black 3-Button|Slim Wireless Mouse|Microsoft Basic Optical Mouse|Wireless Portable Mouse|Gaming Mouse Professional"),transB@itemInfo$labels)
-# indicesKeyboard <- grepl(c("HP USB Keyboard|Logitech Wireless Keyboard|Rii LED Keyboard|Logitech Keyboard|Backlit LED Gaming Keyboard|Dell Wired Keyboard|Apple Wired Keyboard|Apple Wireless Keyboard|Apple Magic Keyboard"),transB@itemInfo$labels)
-# indicesCombo <- grepl(c("Logitech MK550 Wireless Wave Keyboard and Mouse Combo|Logitech Desktop MK120 Mouse and keyboard Combo|Logitech MK270 Wireless Keyboard and Mouse Combo|Dell KM117 Wireless Keyboard & Mouse|EagleTec Wireless Combo Keyboard and Mouse|Microsoft Wireless Comfort Keyboard and Mouse|Microsoft Wireless Desktop Keyboard and Mouse|Rii LED Gaming Keyboard & Mouse Combo|Logitech MK360 Wireless Keyboard and Mouse Combo"),transB@itemInfo$labels)
-# indicesComputerHeadPhones <- grepl(c("Zombie Gaming Headset|Logitech ClearChat Headset|Panasonic On-Ear Stereo Headphones RP-HT21|PC Gaming Headset|Kensington Headphones|Logitech Stereo Headset|Koss Home Headphones|Microsoft Headset|Ailihen Stereo Headphones|XIBERIA Gaming Headset"),transB@itemInfo$labels)
-# Names<-transB@itemInfo$labels
-# 
-# transB@itemInfo$labels
-# 
-# #CATEGORIZE THE LABELS
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesLaptop,"Laptop")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesDesktop,"Desktop")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesHardDRives,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesMonitor,"Monitor")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesSpeakers,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesTablets,"Tablets")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesCables,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesActiveHeadPhones,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesAcessories,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesPrinters,"Printers")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesPrintersINk,"Printers Ink")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesCStands,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesSmartHome,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesMouse,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesKeyboard,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesCombo,"Acessories")
-# transB@itemInfo$category <- replace(transB@itemInfo$category,indicesComputerHeadPhones,"Acessories")
+
+trans <- Business2BusinessTransactionObj
+
+indicesLaptop <- grepl(c("Laptop|Aspire|Chromebook|MacBook"),trans@itemInfo$labels)
+indicesDesktop <- grepl(c("Desktop|iMac"),trans@itemInfo$labels)
+indicesTablets <- grepl(c("iPad|Tablet|Tab|Kindle"),trans@itemInfo$labels)
+indicesMonitor <- grepl(c("Monitor"),trans@itemInfo$labels)
+indicesMiceAndKeyboard <-grepl(c("Mouse|Keyboard"),trans@itemInfo$labels)
+indicesHardDRives <- grepl(c("Hard Drive"),trans@itemInfo$labels)
+indicesSpeakers <- grepl(c("Speakers|Speaker|Sonos|Cyber Acoustics|DOSS"),trans@itemInfo$labels)
+indicesCables <- grepl(c("Cable|HDMI Adapter"),trans@itemInfo$labels)
+indicesCombo <- grepl(c("Combo"),trans@itemInfo$labels)
+indicesActiveHeadPhones <- grepl(c("Apple Earpods|Monster Beats|Wireless Sports|In-Ear|APIE|Panasonic On-Ear Stereo Headphones RP-HT21|Philips Flexible Earhook Headphone|Panasonic On-Ear Stereo Headphones"),trans@itemInfo$labels)
+indicesAcessories <- grepl(c("Microsoft Office Home and Student 2016|Computer Game|Belkin Mouse Pad|Large Mouse Pad"),trans@itemInfo$labels)
+indicesPrinters <- grepl(c("Epson Printer|HP Wireless Printer|Canon Office Printer|Brother Printer|DYMO Label Manker"),trans@itemInfo$labels)
+indicesPrintersINk <- grepl(c("Epson Black Ink|HP Black & Tri-color Ink|Canon Ink|Brother Printer Toner|DYMO Labeling Tape"),trans@itemInfo$labels)
+indicesCStands <- grepl(c("Halter Acrylic Monitor Stand|Height-Adjustable Standing Desk|Multi Media Stand|Full Motion Monitor Mount"),trans@itemInfo$labels)
+indicesSmartHome <- grepl(c("Apple TV|Google Home|Smart Light Bulb|Fire TV Stick|Roku Express"),trans@itemInfo$labels)
+indicesMouse <- grepl(c("3-Button Mouse|Logitech Wireless Mouse|Logitech 3-button Mouse|Redragon Gaming Mouse|HP Wireless Mouse|Generic Black 3-Button|Slim Wireless Mouse|Microsoft Basic Optical Mouse|Wireless Portable Mouse|Gaming Mouse Professional"),trans@itemInfo$labels)
+indicesKeyboard <- grepl(c("HP USB Keyboard|Logitech Wireless Keyboard|Rii LED Keyboard|Logitech Keyboard|Backlit LED Gaming Keyboard|Dell Wired Keyboard|Apple Wired Keyboard|Apple Wireless Keyboard|Apple Magic Keyboard"),trans@itemInfo$labels)
+indicesCombo <- grepl(c("Logitech MK550 Wireless Wave Keyboard and Mouse Combo|Logitech Desktop MK120 Mouse and keyboard Combo|Logitech MK270 Wireless Keyboard and Mouse Combo|Dell KM117 Wireless Keyboard & Mouse|EagleTec Wireless Combo Keyboard and Mouse|Microsoft Wireless Comfort Keyboard and Mouse|Microsoft Wireless Desktop Keyboard and Mouse|Rii LED Gaming Keyboard & Mouse Combo|Logitech MK360 Wireless Keyboard and Mouse Combo"),trans@itemInfo$labels)
+indicesComputerHeadPhones <- grepl(c("Zombie Gaming Headset|Logitech ClearChat Headset|Panasonic On-Ear Stereo Headphones RP-HT21|PC Gaming Headset|Kensington Headphones|Logitech Stereo Headset|Koss Home Headphones|Microsoft Headset|Ailihen Stereo Headphones|XIBERIA Gaming Headset"),trans@itemInfo$labels)
+
+Names<-trans@itemInfo$labels
+
+```
+</br>
+</br>
+</br>
+</br>
+```{r}
+
+
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesLaptop,"Laptop")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesDesktop,"Desktop")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesHardDRives,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesMonitor,"Monitor")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesSpeakers,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesTablets,"Tablets")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesCables,"Accesories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesActiveHeadPhones,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesAcessories,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesPrinters,"Printers")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesPrintersINk,"Printers Ink")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesCStands,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesSmartHome,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesMouse,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesKeyboard,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesCombo,"Acessories")
+trans@itemInfo$category <- replace(trans@itemInfo$category,indicesComputerHeadPhones,"Acessories")
 
 
 ```
 </br>
 </br>
 </br>
-
-Here it's showed how to make rules for both item name and category.
-</br>
-
 ```{r}
+Rules<- apriori (trans, parameter = list(supp = 0.0001, conf = 0.5,  minlen=2))
 
 
-# #AGGREGATE BY CATEGORY
-# B2b_cat<-aggregate(transB, by="category")
-# RulesBCat<- apriori (B2b_cat, parameter = list(supp = 0.008, conf = 0.2,  minlen=2))
-# 
-# RulesB<- apriori (transB, parameter = list(supp = 0.004, conf = 0.2,  minlen=2))
-# 
-# ####3. REDUNDANT #####
-# #show the redundant rules
-# is.redundant(RulesB)
-# 
-# #DELETE THE REDUNDANT
-# RulesB_RED <- RulesBCat[!is.redundant(RulesBCat)]
-# 
-# 
-# ####3.PLOTTING####
-# 
-# ruleExplorer(RulesB)
-# ruleExplorer(RulesB_RED)
-# ruleExplorer(RulesBCat)
-# 
+B2b_cat<-aggregate(Rules, by="category")
 
+
+
+ruleExplorer(B2b_cat)
 
 ```
 

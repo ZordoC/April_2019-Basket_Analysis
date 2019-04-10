@@ -14,7 +14,7 @@ if(require("pacman")=="FALSE"){
 B2c <- read_csv("C:/Users/Sergi Ch/Downloads/UBIQUM/PROJECT 2 - R/RM2T4/Datasets/B2cReal.txt")
 B2c[1]<-NULL
 
-transC<-as(B2c, "transactions")
+transC<-B
 
 
 #####1.CATEGORY LEVELS####

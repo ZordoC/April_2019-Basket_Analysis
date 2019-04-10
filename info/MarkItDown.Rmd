@@ -18,118 +18,13 @@ output:
 
 
 
-
-
-
-
-## Business Conclusions
-
-
-
-
-
-
-## Technical analysis
-
-
-
-
-
-### Preprocess
-
-
-
-#### Data-Break Down
-
 </br>
 </br>
 </br>
 </br>
-When we imported the data, we first started to wonder how frequent are high quantity item purchases, because if we have little data on the end the data spectrum, they could be possible outliers.
-</br>
-Well first thing is first, we just import the data into Rstudio.
-</br>
-</br>
-</br>
-</br>
-```{r }
+<pre>
+When we imported the data, we first started to wonder how frequent are high quantity item purchases,      because if we have little data on the end the data spectrum, they could be possible outliers.
+</pre>
 
-if(require("pacman")=="FALSE"){
-  install.packages('pacman')
-  library('pacman')
-  pacman::p_load(here, stringr, readxl, plyr, caret, dplyr, doParallel,
-lubridate, crayon, corrplot, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
-}
-
-
-# 
-# current_path = getActiveDocumentContext()$path
-# setwd(dirname(current_path))
-# setwd("..")
-# rm(current_path)
-Data1 <-read.transactions(file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv" , format = "basket", 
-                  header = FALSE, sep = ",", 
-                   rm.duplicates = FALSE) 
-                  
-```
-
-There are some easy ways to vizualize the data with the following commands
-
-
-```{r}
-
-#summary(Data1)
-#inspect(Data1) # You can view the transactions. 
-length(Data1) # Number of transactions.
-M <-size(Data1) # Number of items per transaction
-#LIST(Data1) # Lists the transactions by conversion (LIST must be capitalized)
-#itemLabels(Data1)#
-```
-</br>
-</br>
-</br>
-Taking a good look at the command length data, it returns us a matrix of the number of items bought in each transaction store in a matrix.
-</br>
-With this information we can plot a simple histogram, and some very valuable information.
-</br>
-</br>
-</br>
-```{r}
-hist(M,breaks=30)
-
-ggplot
-
-## breaks = 20 for the number of items
-```
-</br>
-</br>
-</br>
-This graph is very intersting, we now know which frequency each "basket" has, and we can conlcuded that after more than 15 items, so maybe we should just remove those values, well I think a good way to do that is to just read the original as dataframe, remove colums x15 and upwards, save it , and read it again but this time as a transaction data.
-</br>
-</br>
-</br>
-```{r}
-
-Data2 <- read.csv( file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv" , header = TRUE , sep = ',')
-
-
-Data2 <- Data2[,-c(20,21,22,23,24,25,26,27,28,29,30,31,32)]
-
-
-write.csv(Data2, file = "/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/Only15items.csv")
-
-
-
-Data1 <-read.transactions(file ="/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4/data/ElectronidexTransactions2017.csv" , format = "basket", 
-                  header = FALSE, sep = ",", 
-                   rm.duplicates = FALSE) 
-
-
-```
-
-
-
-
-
-####Creating 
+When we imported the data, we first started to wonder how frequent are high quantity item purchases,      because if we have little data on the end the data spectrum, they could be possible outliers.
 
