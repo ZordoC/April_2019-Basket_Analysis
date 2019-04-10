@@ -10,15 +10,6 @@
 </br>
 </br>
 
-<head>
-
-
-</head>
-
-</br>
-</br>
-</br>
-
 <body>
 
  <ul>
