@@ -119,3 +119,162 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status[2Ppushcommit -m ReadMeExperiment[K[1Pstatusdadd -Astatusadd -A
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git add -Astatus[2Ppushcommit -m ReadMeExperiment[K-m ReadMeExperiment
+[master a9eab05] ReadMeExperiment
+ 3 files changed, 76 insertions(+), 3 deletions(-)
+ rewrite .Rproj.user/5700CA6/console06/INDEX001 (75%)
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit -m ReadMeExperimentadd -A[Kstatus
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git statuscommit -m ReadMeExperimentadd -A[Kstatus[2Ppush
+Username for 'https://github.com': ZordoC
+Password for 'https://ZordoC@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 2.07 KiB | 2.07 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+remote: This repository moved. Please use the new location:[K
+remote:   https://github.com/ZordoC/Basket-Analysis.git[K
+To https://github.com/ZordoC/RM2T4.git
+   f43ea14..a9eab05  master -> master
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rhistory[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/5700CA6/pcs/files-pane.pper[m
+	[31mmodified:   .Rproj.user/5700CA6/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/5700CA6/pcs/windowlayoutstate.pper[m
+	[31mmodified:   .Rproj.user/5700CA6/rmd-outputs[m
+	[31mmodified:   .Rproj.user/5700CA6/sources/prop/INDEX[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/cuornr70lo36l/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000b.error[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/czv3gqa3j1lav/000008.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA61399EFD7/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c2azpbio9ajfs/000006.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c5zwlx3amc013/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000016.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000018.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/00001a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/crnk9u1o6i5c3/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/csetup_chunk/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cuasl9224f6aw/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6D0FB5358/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6E64ED62D/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000006.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000008.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/00000a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c0m59czjoiv7w/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c8kjsovc6odd9/00000c.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chiu7semvm17a/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cl70abjor7qi7/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/crnk9u1o6i5c3/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/csetup_chunk/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cuasl9224f6aw/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cz0ndhjmamz4i/000002.csv[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   Scripts/Step1-TheFinalApproach.R[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mtw.Rmd[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ [K]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ [K]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git [K[K[K[Kgit status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rhistory[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/5700CA6/pcs/files-pane.pper[m
+	[31mmodified:   .Rproj.user/5700CA6/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/5700CA6/pcs/windowlayoutstate.pper[m
+	[31mmodified:   .Rproj.user/5700CA6/rmd-outputs[m
+	[31mmodified:   .Rproj.user/5700CA6/sources/prop/INDEX[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/cuornr70lo36l/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000b.error[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/czv3gqa3j1lav/000008.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA61399EFD7/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c2azpbio9ajfs/000006.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c5zwlx3amc013/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000016.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000018.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/00001a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/crnk9u1o6i5c3/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/csetup_chunk/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cuasl9224f6aw/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6D0FB5358/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6E64ED62D/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000006.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000008.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/00000a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c0m59czjoiv7w/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c8kjsovc6odd9/00000c.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chiu7semvm17a/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cl70abjor7qi7/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/crnk9u1o6i5c3/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/csetup_chunk/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cuasl9224f6aw/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.rdf[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cz0ndhjmamz4i/000002.csv[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   Scripts/Step1-TheFinalApproach.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status[2Ppushstatuscommit -m ReadMeExperimentstatus[K[2Ppushstatuscommit -m ReadMeExperimentadd -A[K

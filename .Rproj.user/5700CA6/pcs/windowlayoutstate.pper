@@ -1,19 +1,14 @@
 {
     "left" : {
         "panelheight" : 655,
-<<<<<<< HEAD
-        "splitterpos" : 230,
-        "topwindowstate" : "MAXIMIZE",
-=======
-        "splitterpos" : 196,
+        "splitterpos" : 156,
         "topwindowstate" : "NORMAL",
->>>>>>> José
         "windowheight" : 693
     },
     "right" : {
         "panelheight" : 655,
         "splitterpos" : 82,
-        "topwindowstate" : "MAXIMIZE",
+        "topwindowstate" : "MINIMIZE",
         "windowheight" : 693
     }
 }

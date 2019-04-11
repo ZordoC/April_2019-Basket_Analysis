@@ -1,7 +1,7 @@
 if(require("pacman")=="FALSE"){
   install.packages('pacman')
   library('pacman')
-  pacman::p_load(here, stringr, readxl, plyr, caret, dplyr, doParallel,
+  pacman::p_load(here, stringr, readxl, plyr, caret, dplyr, doParallel,rstudioapi,
                  lubridate, crayon, corrplot,rstudioapi, ggplot2, e1071, reshape2, tidyverse, arules, arulesViz)
 }
 
@@ -14,11 +14,11 @@ setwd(dirname(current_path))
 setwd("..")
 rm(current_path)
 
+getwd()
 
-Data<-read.csv("data/ElectronidexTransactions2017.csv",
-                         header=FALSE,sep=",") 
+Data<-read.csv(file = "data/ElectronidexTransactions2017(1).csv")
 
-trans<-read.transactions("data/ElectronidexTransactions2017.csv",
+trans<-read.transactions("data/ElectronidexTransactions2017(1).csv",
                          format="basket",sep=",",rm.duplicates = TRUE) 
 
 

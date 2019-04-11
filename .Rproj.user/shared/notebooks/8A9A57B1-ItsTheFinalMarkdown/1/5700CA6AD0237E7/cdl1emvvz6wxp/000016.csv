@@ -1,6 +1,0 @@
-"0","Rules<- apriori (trans, parameter = list(supp = 0.0001, conf = 0.5,  minlen=2))"
-"1","Apriori
-"
-"1","
-Parameter specification:
-"
