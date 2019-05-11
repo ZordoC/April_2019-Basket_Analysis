@@ -278,3 +278,208 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status[2Ppushstatuscommit -m ReadMeExperimentstatus[K[2Ppushstatuscommit -m ReadMeExperimentadd -A[K
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git add -Astatus
+^[[AOn branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   .Rhistory[m
+	[32mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[32mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+	[32mmodified:   .Rproj.user/5700CA6/pcs/files-pane.pper[m
+	[32mmodified:   .Rproj.user/5700CA6/pcs/source-pane.pper[m
+	[32mmodified:   .Rproj.user/5700CA6/pcs/windowlayoutstate.pper[m
+	[32mmodified:   .Rproj.user/5700CA6/rmd-outputs[m
+	[32mmodified:   .Rproj.user/5700CA6/sources/prop/INDEX[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/cuornr70lo36l/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000a.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000b.error[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/czv3gqa3j1lav/000008.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA61399EFD7/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c2azpbio9ajfs/000006.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c5zwlx3amc013/000004.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000016.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.metadata[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.rdf[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000018.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.metadata[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.rdf[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/00001a.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/crnk9u1o6i5c3/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/csetup_chunk/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cuasl9224f6aw/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6D0FB5358/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6E64ED62D/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000006.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.metadata[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.rdf[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000008.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.metadata[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.rdf[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/00000a.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c0m59czjoiv7w/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c8kjsovc6odd9/00000c.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chiu7semvm17a/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chunks.json[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cl70abjor7qi7/000004.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/crnk9u1o6i5c3/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/csetup_chunk/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cuasl9224f6aw/000002.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000004.csv[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.metadata[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.rdf[m
+	[32mdeleted:    .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cz0ndhjmamz4i/000002.csv[m
+	[32mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[32mmodified:   Scripts/Step1-TheFinalApproach.R[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git statusadd -Astatus[2Ppushstatuscommit -m ReadMeExperimentadd -A[Kcommit -m ReadMeExperiment[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kfinal
+[master 6d684c0] final
+ 52 files changed, 387 insertions(+), 2138 deletions(-)
+ rewrite .Rproj.user/5700CA6/console06/INDEX001 (100%)
+ delete mode 100644 .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/cuornr70lo36l/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000a.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/5700CA69B4C22CE/czv3gqa3j1lav/00000b.error
+ delete mode 100644 .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/61B65B60-MarkItDown/1/s/czv3gqa3j1lav/000008.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA61399EFD7/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c2azpbio9ajfs/000006.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/c5zwlx3amc013/000004.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000016.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000017.rdf
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000018.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/000019.rdf
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cdl1emvvz6wxp/00001a.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/crnk9u1o6i5c3/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/csetup_chunk/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6AD0237E7/cuasl9224f6aw/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6D0FB5358/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6E64ED62D/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000006.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000007.rdf
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000008.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/000009.rdf
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/5700CA6FD859CB6/cvw6e76f69sib/00000a.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c0m59czjoiv7w/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/c8kjsovc6odd9/00000c.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chiu7semvm17a/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/chunks.json
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cl70abjor7qi7/000004.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/crnk9u1o6i5c3/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/csetup_chunk/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cuasl9224f6aw/000002.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000004.csv
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.metadata
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cwgw1faq7gzwy/000005.rdf
+ delete mode 100644 .Rproj.user/shared/notebooks/8A9A57B1-ItsTheFinalMarkdown/1/s/cz0ndhjmamz4i/000002.csv
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit -m final[9Pstatusadd -Astatus[2Ppush
+Username for 'https://github.com': ZordoC
+Password for 'https://ZordoC@github.com': 
+To https://github.com/ZordoC/RM2T4.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/ZordoC/RM2T4.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git fetch
+remote: Enumerating objects: 18, done.[K
+remote: Counting objects:   5% (1/18)   [Kremote: Counting objects:  11% (2/18)   [Kremote: Counting objects:  16% (3/18)   [Kremote: Counting objects:  22% (4/18)   [Kremote: Counting objects:  27% (5/18)   [Kremote: Counting objects:  33% (6/18)   [Kremote: Counting objects:  38% (7/18)   [Kremote: Counting objects:  44% (8/18)   [Kremote: Counting objects:  50% (9/18)   [Kremote: Counting objects:  55% (10/18)   [Kremote: Counting objects:  61% (11/18)   [Kremote: Counting objects:  66% (12/18)   [Kremote: Counting objects:  72% (13/18)   [Kremote: Counting objects:  77% (14/18)   [Kremote: Counting objects:  83% (15/18)   [Kremote: Counting objects:  88% (16/18)   [Kremote: Counting objects:  94% (17/18)   [Kremote: Counting objects: 100% (18/18)   [Kremote: Counting objects: 100% (18/18), done.[K
+remote: Compressing objects:   5% (1/18)   [Kremote: Compressing objects:  11% (2/18)   [Kremote: Compressing objects:  16% (3/18)   [Kremote: Compressing objects:  22% (4/18)   [Kremote: Compressing objects:  27% (5/18)   [Kremote: Compressing objects:  33% (6/18)   [Kremote: Compressing objects:  38% (7/18)   [Kremote: Compressing objects:  44% (8/18)   [Kremote: Compressing objects:  50% (9/18)   [Kremote: Compressing objects:  55% (10/18)   [Kremote: Compressing objects:  61% (11/18)   [Kremote: Compressing objects:  66% (12/18)   [Kremote: Compressing objects:  72% (13/18)   [Kremote: Compressing objects:  77% (14/18)   [Kremote: Compressing objects:  83% (15/18)   [Kremote: Compressing objects:  88% (16/18)   [Kremote: Compressing objects:  94% (17/18)   [Kremote: Compressing objects: 100% (18/18)   [Kremote: Compressing objects: 100% (18/18), done.[K
+remote: Total 18 (delta 8), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:   5% (1/18)   Unpacking objects:  11% (2/18)   Unpacking objects:  16% (3/18)   Unpacking objects:  22% (4/18)   Unpacking objects:  27% (5/18)   Unpacking objects:  33% (6/18)   Unpacking objects:  38% (7/18)   Unpacking objects:  44% (8/18)   Unpacking objects:  50% (9/18)   Unpacking objects:  55% (10/18)   Unpacking objects:  61% (11/18)   Unpacking objects:  66% (12/18)   Unpacking objects:  72% (13/18)   Unpacking objects:  77% (14/18)   Unpacking objects:  83% (15/18)   Unpacking objects:  88% (16/18)   Unpacking objects:  94% (17/18)   Unpacking objects: 100% (18/18)   Unpacking objects: 100% (18/18), done.
+From https://github.com/ZordoC/RM2T4
+   a9eab05..59d487a  master     -> origin/master
+   b98ce76..338f366  Eloi       -> origin/Eloi
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git push 
+Username for 'https://github.com': Zr ordoC
+Password for 'https://ZordoC@github.com': 
+To https://github.com/ZordoC/RM2T4.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/ZordoC/RM2T4.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 5 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git pull 
+hint: Waiting for your editor to close the file... [?2004h[23;0;0t[KMerge made by the 'recursive' strategy.
+ README.md | 17 [32m++++++[m[31m-----------[m
+ 1 file changed, 6 insertions(+), 11 deletions(-)
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git pull
+Already up to date.
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/5700CA6/console06/8CA732B3[m
+	[31mmodified:   .Rproj.user/5700CA6/console06/INDEX001[m
+
+no changes added to commit
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit - m 123
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'm' did not match any file(s) known to git.
+error: pathspec '123' did not match any file(s) known to git.
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit - m 123[1P123
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'm123' did not match any file(s) known to git.
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ git commit - m123[K[K[K[K[K[K[K[K[K[K[K[K[Kpush
+Username for 'https://github.com': ZordoC
+Password for 'https://ZordoC@github.com': 
+Counting objects: 23, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 5.13 KiB | 876.00 KiB/s, done.
+Total 23 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/10)   [Kremote: Resolving deltas:  10% (1/10)   [Kremote: Resolving deltas:  20% (2/10)   [Kremote: Resolving deltas:  30% (3/10)   [Kremote: Resolving deltas:  40% (4/10)   [Kremote: Resolving deltas:  50% (5/10)   [Kremote: Resolving deltas:  60% (6/10)   [Kremote: Resolving deltas:  70% (7/10)   [Kremote: Resolving deltas:  80% (8/10)   [Kremote: Resolving deltas:  90% (9/10)   [Kremote: Resolving deltas: 100% (10/10)   [Kremote: Resolving deltas: 100% (10/10), completed with 9 local objects.[K
+remote: This repository moved. Please use the new location:[K
+remote:   https://github.com/ZordoC/Basket-Analysis.git[K
+To https://github.com/ZordoC/RM2T4.git
+   59d487a..97105f7  master -> master
+]0;/home/zordo/Documents/Ubiqum/R-M2Task4/RM2T4]0;zordo@zordo-HP-Pavilion-g6-Notebook-PC: ~/Documents/Ubiqum/R-M2Task4/RM2T4[01;32mzordo@zordo-HP-Pavilion-g6-Notebook-PC[00m:[01;34m~/Documents/Ubiqum/R-M2Task4/RM2T4[00m$ 
